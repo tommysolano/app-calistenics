@@ -1,6 +1,8 @@
 const passport = require('passport')
-const localStrategy = require('passport-local').Strategy
+const LocalStrategy = require('passport-local').Strategy
 const User = require('../models/user')
+const bcrypt = require('bcryptjs')
+const salt = bcrypt.genSaltSync(10)
 
 passport.serializeUser((user, done) => { // conserva los datos del usuario
     done(null, user.id)
@@ -19,13 +21,15 @@ passport.use("local-signup", new LocalStrategy({ // analiza si el nuevo usuario 
 }, async (req, email, password, done) => {
 
     const user = await User.findOne({email: email})
+    
 
     if(user){
-        return done(null, false, ) // TODO: añadir mensaje de que el email ya ha sido tomado
+        return done("the email is already registered") 
     } else {
+        encryptPassword = bcrypt.hashSync(password, salt) // encriptamos el password
         const newUser = new User()
         newUser.email = email
-        newUser.password = newUser.encryptPassword(password)
+        newUser.password = encryptPassword
         await newUser.save()
         done(null, newUser)
     }
@@ -41,13 +45,17 @@ passport.use("local-signin", new LocalStrategy({ // compara el email y la comtra
     const user = await User.findOne({email: email})
 
     if(!user){
-        done(null, false, ) // TODO: añadir al mensaje de que el email no esta registrado
+        return done("the email is not registered") 
     }
 
-    if(!user.comparePassword(password)){
-        return done(null, false, ) // TODO: añadir mensaje de la contraseña no es igual
+    const validPassword = bcrypt.compareSync(password, user.password)
+
+    if(!validPassword){
+        return done("the password does not match") 
     }
 
-    done(null, user)
+    return done(null, user)
 
 }))
+
+module.exports = passport
