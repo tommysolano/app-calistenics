@@ -2,6 +2,8 @@ const express = require('express');
 const morgan = require('morgan');
 const passport = require('./passport/local-auth');
 const session = require('express-session');
+const cookieParser = require('cookie-parser');
+const cors = require('cors');
 
 
 
@@ -12,19 +14,26 @@ require("./passport/local-auth")
 
 
 //settings
-app.set("port", process.env.PORT || 3000)
+app.set("port", process.env.PORT || 5000)
 
 
 //middlewares
 app.use(morgan("dev"))
 app.use(express.json());
 app.use(express.urlencoded({extended: false}))
+app.use(
+    cors({
+      origin: "http://localhost:3000", // <-- location of the react app were connecting to
+      credentials: true,
+    })
+  );
 app.use(session({
-    secret: "mysecretsession",
+    secret: "thisismysecretsessionXD",
     resave: false,
     saveUninitialized: false,
     cookie: {secure: true}
 }))
+app.use(cookieParser("thisismysecretsessionXD"))
 app.use(passport.initialize())
 app.use(passport.session())
 

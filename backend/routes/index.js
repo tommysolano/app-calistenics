@@ -20,16 +20,17 @@ router.post("/signup", (req, res) => {
                     error: error.message || "Server error",
                 });
             }
-            return res.json(user);
+            res.status(200)
+            console.log(req.user)
         });
     })(req, res)
 })
 
 
-// ----------------------- LOGIN -------------------------------
+// ----------------------- LOGIN -----------------------------------
 
 
-router.post("/signin", (req, res) => {
+router.post("/signin", (req, res, next) => {
     passport.authenticate("local-signin", function (error, user, info) {
         if (error) {
             return res.status(500).json({
@@ -45,21 +46,34 @@ router.post("/signin", (req, res) => {
                     error: error.message || "Server error",
                 });
             }
+            //res.sendStatus(200)
+            console.log(req.user)
         });
 
         //?user.isAuthenticated = true?  deberia utilizar esta metodo de autenticacion o solo el expuesto abajo?
         return res.json(user);
-    })(req, res)
+    })(req, res, next)
 })
+
+// ----------------------- USER -------------------------------
+
+router.get("/user", (req, res) => {
+    res.send(req.user)
+    console.log(req.user)
+})
+
+// ----------------------- LOGOUT -------------------------------
 
 
 router.get("/logout", (req, res, next) => {
     req.logout()
-    res.redirect("/")
+    //res.redirect("/")
+    //res.send("logout success")
 })
-
+ 
 
 // ----------------------- AUTHETICATION -------------------------------
+
 
 router.use((req, res, next) => {
     isAuthenticated(req, res, next)
@@ -71,7 +85,7 @@ function isAuthenticated(req, res, next) {
     if(req.isAuthenticated()){
         return next()
     }
-    res.redirect("/")
+    //res.redirect("/")
 }
 
 
