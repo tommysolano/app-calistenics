@@ -51,7 +51,9 @@ router.post("/signin", (req, res, next) => {
         });
 
         //?user.isAuthenticated = true?  deberia utilizar esta metodo de autenticacion o solo el expuesto abajo?
-        return res.json(user);
+        const newUser = user;
+        newUser.password = null
+        return res.json(newUser);
     })(req, res, next)
 })
 
@@ -67,6 +69,7 @@ router.get("/user", (req, res) => {
 
 router.get("/logout", (req, res, next) => {
     req.logout()
+    res.send("logout")
     //res.redirect("/")
     //res.send("logout success")
 })
@@ -77,11 +80,12 @@ router.get("/logout", (req, res, next) => {
 
 router.use((req, res, next) => {
     isAuthenticated(req, res, next)
-    next()
+    //next()
 })
 
 
 function isAuthenticated(req, res, next) {
+    console.log(req.isAuthenticated)
     if(req.isAuthenticated()){
         return next()
     }

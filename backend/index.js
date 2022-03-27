@@ -29,9 +29,9 @@ app.use(
   );
 app.use(session({
     secret: "thisismysecretsessionXD",
-    resave: false,
-    saveUninitialized: false,
-    cookie: {secure: true}
+    resave: true,
+    saveUninitialized: true,
+    //cookie: {secure: true}
 }))
 app.use(cookieParser("thisismysecretsessionXD"))
 app.use(passport.initialize())
