@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router()
 const passport = require('passport');
+const jwt = require('jsonwebtoken');
 
 
 // ----------------------- REGISTER -------------------------------
@@ -20,8 +21,14 @@ router.post("/signup", (req, res) => {
                     error: error.message || "Server error",
                 });
             }
-            res.status(200)
-            console.log(req.user)
+            res.status(200).json({
+                ok: true,
+                user: {
+                    id: req.user._id,
+                    email: req.user.email,
+                    name: req.user.name
+                }
+            })
         });
     })(req, res)
 })
@@ -46,23 +53,28 @@ router.post("/signin", (req, res, next) => {
                     error: error.message || "Server error",
                 });
             }
-            //res.sendStatus(200)
-            console.log(req.user)
         });
 
-        //?user.isAuthenticated = true?  deberia utilizar esta metodo de autenticacion o solo el expuesto abajo?
-        const newUser = user;
-        newUser.password = null
-        return res.json(newUser);
+        const body = { _id: user._id, email: user.email, name: user.name}
+        const token = jwt.sign( { user:body } , "TOP_SECRET")
+
+        return res.json({ token, user: body})
     })(req, res, next)
 })
 
 // ----------------------- USER -------------------------------
 
 router.get("/user", (req, res) => {
-    res.send(req.user)
-    console.log(req.user)
+    const newUser = req.user
+    newUser.password = null
+    res.send(newUser)
 })
+
+router.get("/protected"), passport.authenticate("jwt", {session: false}), (req, res) => {
+    res.json({
+        ok: req.user
+    })
+}
 
 // ----------------------- LOGOUT -------------------------------
 
@@ -70,15 +82,13 @@ router.get("/user", (req, res) => {
 router.get("/logout", (req, res, next) => {
     req.logout()
     res.send("logout")
-    //res.redirect("/")
-    //res.send("logout success")
 })
  
 
 // ----------------------- AUTHETICATION -------------------------------
 
 
-router.use((req, res, next) => {
+/* router.use((req, res, next) => {
     isAuthenticated(req, res, next)
     //next()
 })
@@ -91,6 +101,6 @@ function isAuthenticated(req, res, next) {
     }
     //res.redirect("/")
 }
-
+ */
 
 module.exports = router

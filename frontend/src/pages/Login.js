@@ -33,9 +33,9 @@ function Login() {
       <div>
         <p>Login</p>
         <form onSubmit={handleSubmit}>
-        <label for="email">Email</label><br/>
+        <label htmlFor="email">Email</label><br/>
         <input type="email" id="email" name="email" ref={emailRef} /><br/>
-        <label for="password">Password</label><br/>
+        <label htmlFor="password">Password</label><br/>
         <input type="password" id="password" name="password" ref={passwordRef}></input><br/><br/>
         <input type="submit" value="Login"/>
       </form>

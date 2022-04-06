@@ -1,8 +1,8 @@
 const express = require('express');
 const morgan = require('morgan');
 const passport = require('./passport/local-auth');
-const session = require('express-session');
-const cookieParser = require('cookie-parser');
+/* const session = require('express-session');
+const cookieParser = require('cookie-parser'); */
 const cors = require('cors');
 
 
@@ -27,13 +27,13 @@ app.use(
       credentials: true,
     })
   );
-app.use(session({
+/* app.use(session({
     secret: "thisismysecretsessionXD",
     resave: true,
     saveUninitialized: true,
     //cookie: {secure: true}
 }))
-app.use(cookieParser("thisismysecretsessionXD"))
+app.use(cookieParser("thisismysecretsessionXD")) */
 app.use(passport.initialize())
 app.use(passport.session())
 
