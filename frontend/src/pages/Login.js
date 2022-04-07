@@ -1,46 +1,94 @@
-import {useNavigate} from "react-router-dom"
-import {useRef} from "react"
-import Axios from 'axios'
-
+import { useState, useContext } from 'react';
+import { authContext } from "../context/authContext"
+// import { useNavigate } from "react-router-dom"
 
 function Login() {
 
-  const emailRef = useRef(null)
-  const passwordRef = useRef(null)
-  let navigate = useNavigate();
+  const { setAuth } = useContext(authContext)
 
-  const handleSubmit = function (e) {
-    e.preventDefault();
-    Axios({
-      method: "POST",
-      data: {
-        email: emailRef.current.value,
-        password: passwordRef.current.value,
-      },
-      
-      withCredentials: true,
-      url: "http://localhost:5000/api/signin",
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    }).then((res) => {
-      navigate("/profile", { replace: true })
+  //const navigate = useNavigate()
+
+  const [formInputs, setFormInputs] = useState({
+    email: "",
+    password: ""
+  })
+
+  const handleInputChange = e => {
+    setFormInputs({
+      ...formInputs,
+      [e.target.name]: e.target.value
     })
-      .catch((err) => console.log(err))
   }
 
-    return (
-      <div>
-        <p>Login</p>
-        <form onSubmit={handleSubmit}>
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+
+    if(formInputs.email === "" || formInputs.password === "") {
+      return alert("Los campos no deben ir vacios")
+    }
+
+    const data = {
+      email: formInputs.email,
+      password: formInputs.password
+    }
+
+    try {
+
+      const resp = await fetch("http://localhost:5000/api/signin", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json"
+        },
+        body: JSON.stringify(data)
+      })
+
+      const result = await resp.json()
+
+      if (result.error){
+        return alert(result.message)
+      }
+
+      localStorage.setItem("token", JSON.stringify(result.token))
+
+      setAuth({
+        auth: true,
+        token: result.token
+      })
+
+      // navigate("/profile", { replace: true})
+
+    } catch (err) {
+      console.log("Error: ", err)
+    }
+  }
+
+  return (
+    <div>
+      <p>Login</p>
+      <form onSubmit={handleSubmit}>
         <label htmlFor="email">Email</label><br/>
-        <input type="email" id="email" name="email" ref={emailRef} /><br/>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          value={ formInputs.email }
+          onChange={ handleInputChange }
+        /> <br/>
+
         <label htmlFor="password">Password</label><br/>
-        <input type="password" id="password" name="password" ref={passwordRef}></input><br/><br/>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          value={ formInputs.password }
+          onChange={ handleInputChange }
+        /> <br/> <br/>
+
         <input type="submit" value="Login"/>
       </form>
-      </div>
-    );
-  }
-  
-  export default Login;
+    </div>
+  )
+
+}
+
+export default Login
