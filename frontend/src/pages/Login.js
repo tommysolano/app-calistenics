@@ -1,19 +1,17 @@
 import { useState, useContext } from 'react';
 import { authContext } from "../context/authContext"
-// import { useNavigate } from "react-router-dom"
 
 function Login() {
 
-  const { setAuth } = useContext(authContext)
+  const { setAuth } = useContext(authContext) // verifica si ha iniciado sesión
 
-  //const navigate = useNavigate()
 
-  const [formInputs, setFormInputs] = useState({
+  const [formInputs, setFormInputs] = useState({ // el estado del formulario que se enviará al servidor
     email: "",
     password: ""
   })
 
-  const handleInputChange = e => {
+  const handleInputChange = e => { // ingresa los valores en el formulario
     setFormInputs({
       ...formInputs,
       [e.target.name]: e.target.value
@@ -54,8 +52,6 @@ function Login() {
         auth: true,
         token: result.token
       })
-
-      // navigate("/profile", { replace: true})
 
     } catch (err) {
       console.log("Error: ", err)

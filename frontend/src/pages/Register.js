@@ -1,46 +1,99 @@
-import {useNavigate} from "react-router-dom"
-import {useRef} from "react"
-import Axios from 'axios'
+import { useState, useContext } from 'react';
+import { authContext } from "../context/authContext"
 
 
 function Register() {
 
-  const emailRef = useRef(null)
-  const passwordRef = useRef(null)
-  const nameRef = useRef(null)
-  let navigate = useNavigate();
+  const { setAuth } = useContext(authContext) // verifica si ha iniciado sesión
 
-  const handleSubmit = function (e) {
-    e.preventDefault();
-    Axios({
-      method: "POST",
-      data: {
-        email: emailRef.current.value,
-        password: passwordRef.current.value,
-        name: nameRef.current.value
-      },
-      
-      withCredentials: true,
-      url: "http://localhost:5000/api/signup",
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    }).then((res) => {
-      navigate("/profile", { replace: true })
+  const [formInputs, setFormInputs] = useState({ // el estado del formulario que se enviará al servidor
+    email: "",
+    password: "",
+    name: ""
+  })
+
+  const handleInputChange = e => { // ingresa los valores en el formulario
+    setFormInputs({
+      ...formInputs,
+      [e.target.name]: e.target.value
     })
-      .catch((err) => console.log(err))
   }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+
+    if(formInputs.email === "" || formInputs.password === "" || formInputs.name === "") {
+      return alert("Los campos no deben ir vacios")
+    }
+
+    const data = {
+      email: formInputs.email,
+      password: formInputs.password,
+      name: formInputs.name
+    }
+
+    try {
+      
+      const resp = await fetch("http://localhost:5000/api/signup", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json"
+        },
+        body: JSON.stringify(data)
+      })
+
+      const result = await resp.json()
+
+      if (result.error){
+        return alert(result.message)
+      }
+
+      localStorage.setItem("token", JSON.stringify(result.token))
+
+      setAuth({
+        auth: true,
+        token: result.token
+      })
+
+    } catch (error) {
+      
+      console.log("error: ", error)
+
+    }
+  }
+
 
     return (
       <div>
-        <p>Register</p>
-        <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Name</label><br/>
-        <input type="name" id="name" name="name" ref={nameRef}/><br/>
+        <p>Login</p>
+      <form onSubmit={handleSubmit}>
+      <label htmlFor="name">Name</label><br/>
+        <input
+          type="name"
+          id="name"
+          name="name"
+          value={ formInputs.name }
+          onChange={ handleInputChange }
+        /> <br/>
+
         <label htmlFor="email">Email</label><br/>
-        <input type="email" id="email" name="email" ref={emailRef}/><br/>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          value={ formInputs.email }
+          onChange={ handleInputChange }
+        /> <br/>
+
         <label htmlFor="password">Password</label><br/>
-        <input type="password" id="password" name="password" ref={passwordRef}></input><br/><br/>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          value={ formInputs.password }
+          onChange={ handleInputChange }
+        /> <br/> <br/>
+
         <input type="submit" value="Register"/>
       </form>
       </div>

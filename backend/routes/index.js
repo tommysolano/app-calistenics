@@ -1,106 +1,92 @@
 const express = require('express');
-const router = express.Router()
-const passport = require('passport');
-const jwt = require('jsonwebtoken');
+const router = express.Router();
+const User = require('../models/user')
+const jwt = require("jsonwebtoken")
+const verifyToken = require('../libs/verifyToken') 
 
+// registro de usuarios
+router.post("/signup", async (req, res) => {
 
-// ----------------------- REGISTER -------------------------------
+    // verificamos que el usuario no este registrado
+    const verifyEmail = await User.findOne({ email: req.body.email })
 
-router.post("/signup", (req, res) => {
-    passport.authenticate("local-signup", function (error, user, info) {
-        if (error) {
-            return res.status(500).json({
-                message: error || "Something happend",
-                error: error.message || "Server error",
-            });
-        }
-        req.logIn(user, function (error, data) {
-            if (error) {
-                return res.status(500).json({
-                    message: error || "Something happend",
-                    error: error.message || "Server error",
-                });
-            }
-            res.status(200).json({
-                ok: true,
-                user: {
-                    id: req.user._id,
-                    email: req.user.email,
-                    name: req.user.name
-                }
-            })
-        });
-    })(req, res)
-})
-
-
-// ----------------------- LOGIN -----------------------------------
-
-
-router.post("/signin", (req, res, next) => {
-    passport.authenticate("local-signin", function (error, user, info) {
-        if (error) {
-            return res.status(500).json({
-                message: error || "Something happend",
-                error: error.message || "Server error",
-            });
-        }
-
-        req.logIn(user, function (error, data) {
-            if (error) {
-                return res.status(500).json({
-                    message: error || "Something happend",
-                    error: error.message || "Server error",
-                });
-            }
-        });
-
-        const body = { _id: user._id, email: user.email, name: user.name}
-        const token = jwt.sign( { user:body } , "TOP_SECRET")
-
-        return res.json({ token, user: body})
-    })(req, res, next)
-})
-
-// ----------------------- USER -------------------------------
-
-router.get("/user", (req, res) => {
-    const newUser = req.user
-    newUser.password = null
-    res.send(newUser)
-})
-
-router.get("/protected"), passport.authenticate("jwt", {session: false}), (req, res) => {
-    res.json({
-        ok: req.user
-    })
-}
-
-// ----------------------- LOGOUT -------------------------------
-
-
-router.get("/logout", (req, res, next) => {
-    req.logout()
-    res.send("logout")
-})
- 
-
-// ----------------------- AUTHETICATION -------------------------------
-
-
-/* router.use((req, res, next) => {
-    isAuthenticated(req, res, next)
-    //next()
-})
-
-
-function isAuthenticated(req, res, next) {
-    console.log(req.isAuthenticated)
-    if(req.isAuthenticated()){
-        return next()
+    if(verifyEmail){
+        return res.status(401).send("El email ya esta registrado")
     }
-    //res.redirect("/")
-}
- */
+
+    try {
+        // recibiendo la informacion
+        const { username, email, password } = req.body
+
+        // creando un nuevo usuario
+        const user = new User({
+            username,
+            email,
+            password
+        })
+
+        //encriptamos la contraseña
+        user.password = await user.encryptPassword(password)
+
+        await user.save() // se guarda el usuario
+
+        // creamos el token
+        const token = jwt.sign({ id: user.id}, process.env.SECRET_KEY, {
+            expiresIn: 60 * 60 * 24 // expira en 24 horas
+        })
+
+        res.json({ auth: true, token})
+
+    } catch (error) {
+        console.log(error)
+        res.status(500).send("Hubo un problema registrando su usuario")
+    }
+});
+
+
+// inicio de sesion de usuarios
+router.post("/signin", async (req, res) => {
+
+    const user = await User.findOne({ email: req.body.email })
+
+    if (!user) {
+        return res.status(404).send("El email no existe")
+    }
+
+    const validPassword = await user.comparePassword(
+        req.body.password, user.password
+    )
+
+    const token = jwt.sign({ id: user._id}, process.env.SECRET_KEY, {
+        expiresIn: 60 * 60 * 24
+    })
+
+    res.status(200).json({ auth: true, token})
+});
+
+
+
+// cerrar sesion
+router.get("/logout", async (req, res) => {
+    res.status(200).send({ auth: false, token: null})
+});
+
+
+
+// devuelve los datos del usuario
+router.get("/profile", verifyToken, async (req, res) => {
+
+    // buscamos al usuario en la base de datos luego de verificar el token
+    const user = await User.findById(req.userId, {password: 0})
+
+    // en caso de no encontrar al usuario
+    if (!user) {
+        return res.status(404).send("no se encontro el usuario")
+    }
+
+    // devolvemos al usuario
+    res.status(200).json(user)
+})
+
 
 module.exports = router

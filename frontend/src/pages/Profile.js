@@ -1,36 +1,32 @@
-import {useNavigate} from "react-router-dom"
-import {useState} from "react"
+import { useState, useContext } from "react"
+import { authContext } from "../context/authContext"
 import Axios from 'axios'
 
 function Profile() {
 
   const [user, setUser] = useState("")
-  let navigate = useNavigate();
+  const { setAuth } = useContext(authContext)
 
-  const handleSubmit = function (e) {
-    e.preventDefault();
-    Axios({
-      method: "GET",
-      withCredentials: true,
-      url: "http://localhost:5000/api/logout",
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    }).then((res) => {
-      navigate("/", { replace: true })
+  //const token = localStorage.getItem('token');
+
+  const handleLogout = () => {
+    setAuth({
+      auth: false,
+      token: null
     })
-      .catch((err) => console.log(err))
+    localStorage.setItem("token", "")
   }
+
 
   Axios({
     method: "GET",
     withCredentials: true,
     url: "http://localhost:5000/api/user",
     headers: {
-      'Content-Type': 'application/json'
+      "Content-Type": "application/json"
     }
   }).then((res) => {
-    setUser(res.data.name) 
+    console.log(res)
   })
     .catch((err) => console.log(err))
     
@@ -40,9 +36,7 @@ function Profile() {
       <div>
         <p>Profile</p>
         <p>{user}</p>
-        <form onSubmit={handleSubmit}>
-        <input type="submit" value="Logout"/>
-        </form>
+        <button onClick={handleLogout} >Logout</button>
       </div>
     );
   }

@@ -1,7 +1,6 @@
 const mongoose = require('mongoose')
-const { mongodb } = require('./keys')
 
-mongoose.connect(mongodb.URI, {
+mongoose.connect(process.env.DB_CALISTENICS, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })

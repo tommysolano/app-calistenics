@@ -1,4 +1,6 @@
-import { BrowserRouter, Route, Routes} from "react-router-dom"
+import { BrowserRouter, Route, Routes, Navigate} from "react-router-dom"
+import { useContext } from "react"
+import { authContext } from "./context/authContext"
 import Homepage from "./pages/Homepage"
 import Login from "./pages/Login"
 import Register from "./pages/Register"
@@ -8,17 +10,20 @@ import Navbar from "./components/Navbar"
 
 function App() {
 
+  const { auth } = useContext(authContext)
+
+  console.log(auth)
+
   return (
     <BrowserRouter>
 
       <Navbar />
-
       <Routes>
-      <Route path="/" element={<Homepage/>}/> 
-      <Route path="/login" element={<Login/>}/>
-      <Route path="/register" element={<Register/>}/>
-      <Route path="/profile" element={<Profile />}/>
-      <Route path="*" element={<Notfound/>}/>
+        <Route path="/" element={<Homepage/>}/>
+        <Route path="/register" element={ !auth.auth ? <Register/> : <Navigate to="/profile" replace />}/>
+        <Route path="/login" element={ !auth.auth ? <Login /> : <Navigate to="/profile" replace /> } />
+        <Route path="/profile" element={ auth.auth ? <Profile />  : <Navigate to="/" replace /> } />
+        <Route path="*" element={<Notfound/>}/>
       </Routes>
     </BrowserRouter>
   );
