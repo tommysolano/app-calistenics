@@ -7,9 +7,9 @@ function Register() {
   const { setAuth } = useContext(authContext) // verifica si ha iniciado sesión
 
   const [formInputs, setFormInputs] = useState({ // el estado del formulario que se enviará al servidor
+    username: "",
     email: "",
-    password: "",
-    name: ""
+    password: ""
   })
 
   const handleInputChange = e => { // ingresa los valores en el formulario
@@ -27,9 +27,9 @@ function Register() {
     }
 
     const data = {
+      username: formInputs.name,
       email: formInputs.email,
       password: formInputs.password,
-      name: formInputs.name
     }
 
     try {

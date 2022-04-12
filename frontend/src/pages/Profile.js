@@ -5,9 +5,8 @@ import Axios from 'axios'
 function Profile() {
 
   const [user, setUser] = useState("")
-  const { setAuth } = useContext(authContext)
+  const { auth, setAuth } = useContext(authContext)
 
-  //const token = localStorage.getItem('token');
 
   const handleLogout = () => {
     setAuth({
@@ -18,15 +17,17 @@ function Profile() {
   }
 
 
+  //! se ejecuta de manera infinita, error 304 del servidor o del useState
   Axios({
     method: "GET",
     withCredentials: true,
-    url: "http://localhost:5000/api/user",
+    url: "http://localhost:5000/api/profile",
     headers: {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
+      "x-access-token": auth.token
     }
   }).then((res) => {
-    console.log(res)
+    setUser(res.data)
   })
     .catch((err) => console.log(err))
     
@@ -35,7 +36,7 @@ function Profile() {
     return (
       <div>
         <p>Profile</p>
-        <p>{user}</p>
+        <p>{user.username}</p>
         <button onClick={handleLogout} >Logout</button>
       </div>
     );
