@@ -1,4 +1,4 @@
-import { useState, useContext } from "react"
+import { useState, useEffect, useContext } from "react"
 import { authContext } from "../context/authContext"
 import Axios from 'axios'
 
@@ -15,21 +15,22 @@ function Profile() {
     })
     localStorage.setItem("token", "")
   }
+  
 
-
-  //! se ejecuta de manera infinita, error 304 del servidor o del useState
-  Axios({
-    method: "GET",
-    withCredentials: true,
-    url: "http://localhost:5000/api/profile",
-    headers: {
-      "Content-Type": "application/json",
-      "x-access-token": auth.token
-    }
-  }).then((res) => {
-    setUser(res.data)
-  })
-    .catch((err) => console.log(err))
+    useEffect(() => {
+      Axios({
+        method: "GET",
+        withCredentials: true,
+        url: "http://localhost:5000/api/profile",
+        headers: {
+          "Content-Type": "application/json",
+          "x-access-token": auth.token
+        }
+      }).then((res) => {
+        setUser(res.data)
+      })
+        .catch((err) => console.log(err))
+    },[])
     
   
 
