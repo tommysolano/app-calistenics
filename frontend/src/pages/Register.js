@@ -1,5 +1,7 @@
-import { useState, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { authContext } from "../context/authContext"
+import PublictNavbar from "../components/publicNavbar"
+import "../public/css/register/register.css"
 
 
 function Register() {
@@ -65,7 +67,8 @@ function Register() {
 
     return (
       <div>
-        <p>Login</p>
+        <PublictNavbar/>
+        <p>Register</p>
       <form onSubmit={handleSubmit}>
       <label htmlFor="name">Name</label><br/>
         <input

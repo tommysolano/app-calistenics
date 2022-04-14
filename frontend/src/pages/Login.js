@@ -1,5 +1,7 @@
-import { useState, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { authContext } from "../context/authContext"
+import PublictNavbar from "../components/publicNavbar"
+import "../public/css/login/login.css"
 
 function Login() {
 
@@ -60,28 +62,31 @@ function Login() {
 
   return (
     <div>
-      <p>Login</p>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="email">Email</label><br/>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={ formInputs.email }
-          onChange={ handleInputChange }
-        /> <br/>
+      <PublictNavbar/>
+      <div className="container_login">
+        <p>¡Inicia sesión en tu cuenta!</p>
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="email">Email</label><br/>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={ formInputs.email }
+            onChange={ handleInputChange }
+          /> <br/>
 
-        <label htmlFor="password">Password</label><br/>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          value={ formInputs.password }
-          onChange={ handleInputChange }
-        /> <br/> <br/>
+          <label htmlFor="password">Password</label><br/>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            value={ formInputs.password }
+            onChange={ handleInputChange }
+          /> <br/> <br/>
 
-        <input type="submit" value="Login"/>
-      </form>
+          <input type="submit" value="Login"/>
+        </form>
+      </div>
     </div>
   )
 

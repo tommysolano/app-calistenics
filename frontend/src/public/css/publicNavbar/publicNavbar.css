@@ -1,0 +1,76 @@
+.publicnavbar {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.publicnavbar .container_calistenics {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.publicnavbar .container_calistenics .calistenics {
+  text-decoration: none;
+  display: inline-block;
+  color: #000;
+  padding-left: 25px;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.publicnavbar .container_logreg {
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.publicnavbar .container_logreg li {
+  list-style: none;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 50%;
+  text-align: center;
+}
+
+.publicnavbar .container_logreg li .logreg {
+  text-decoration: none;
+  display: inline-block;
+  padding: 12px 0 12px 0;
+  color: #000;
+  font-weight: bold;
+}
+
+.publicnavbar .container_logreg .register {
+  background-color: #000;
+}
+
+.publicnavbar .container_logreg .register a {
+  color: #fff;
+}
+/*# sourceMappingURL=publicNavbar.css.map */
