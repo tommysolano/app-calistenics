@@ -5,7 +5,7 @@ export default function Footer () {
     return (
         <div className="footer">
             <p>
-                Copyright © 2020 MAUKRI. All Rights Reserved. Designed by EpsilonDev
+                Copyright © 2022 Calistenics App. All Rights Reserved. Designed by EpsilonDev
             </p>
         </div>
     )

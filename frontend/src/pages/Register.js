@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { authContext } from "../context/authContext"
+import { NavLink } from "react-router-dom"
 import PublictNavbar from "../components/publicNavbar"
 import "../public/css/register/register.css"
 
@@ -24,7 +25,7 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault()
 
-    if(formInputs.email === "" || formInputs.password === "" || formInputs.name === "") {
+    if (formInputs.email === "" || formInputs.password === "" || formInputs.name === "") {
       return alert("Los campos no deben ir vacios")
     }
 
@@ -35,7 +36,7 @@ function Register() {
     }
 
     try {
-      
+
       const resp = await fetch("http://localhost:5000/api/signup", {
         method: "POST",
         headers: {
@@ -46,7 +47,7 @@ function Register() {
 
       const result = await resp.json()
 
-      if (result.error){
+      if (result.error) {
         return alert(result.message)
       }
 
@@ -58,49 +59,57 @@ function Register() {
       })
 
     } catch (error) {
-      
+
       console.log("error: ", error)
 
     }
   }
 
 
-    return (
-      <div>
-        <PublictNavbar/>
-        <p>Register</p>
-      <form onSubmit={handleSubmit}>
-      <label htmlFor="name">Name</label><br/>
-        <input
-          type="name"
-          id="name"
-          name="name"
-          value={ formInputs.name }
-          onChange={ handleInputChange }
-        /> <br/>
+  return (
+    <div>
+      <PublictNavbar />
+      <div className="container_reg">
+        <div className="position_reg">
+          <p>Sing Up and Start Workout</p>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="name"
+              id="name"
+              name="name"
+              placeholder="Name"
+              value={formInputs.name}
+              onChange={handleInputChange}
+            /> <br /> <br />
 
-        <label htmlFor="email">Email</label><br/>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={ formInputs.email }
-          onChange={ handleInputChange }
-        /> <br/>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              value={formInputs.email}
+              onChange={handleInputChange}
+            /> <br /> <br />
 
-        <label htmlFor="password">Password</label><br/>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          value={ formInputs.password }
-          onChange={ handleInputChange }
-        /> <br/> <br/>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Password"
+              value={formInputs.password}
+              onChange={handleInputChange}
+            /> <br /> <br />
 
-        <input type="submit" value="Register"/>
-      </form>
+            <input type="submit" value="Register" className="btn_reg"/>
+          </form>
+          <div className="container_login_acc">
+            <p className="text_reg">Already Have an account</p>
+            <NavLink to="/login" className="reg_acc">Login</NavLink>
+          </div>
+        </div>
       </div>
-    );
-  }
-  
-  export default Register;
+    </div>
+  );
+}
+
+export default Register;
