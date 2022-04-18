@@ -1,22 +1,16 @@
 import React, { useState, useEffect, useContext } from "react"
 import { authContext } from "../context/authContext"
 import Axios from 'axios'
+import PrivateNavbar from "../components/privateNavbar"
 
 function Profile() {
 
   const [user, setUser] = useState("")
-  const { auth, setAuth } = useContext(authContext)
+  const [exercises, setExercises] = useState("")
+  const { auth } = useContext(authContext)
 
 
-  const handleLogout = () => {
-    setAuth({
-      auth: false,
-      token: null
-    })
-    localStorage.setItem("token", "")
-  }
-  
-
+    // obtengo la data del usuario
     useEffect(() => {
       Axios({
         method: "GET",
@@ -31,14 +25,35 @@ function Profile() {
       })
         .catch((err) => console.log(err))
     },[])
+
+
+    // obtengo la data de los ejercicios
+    useEffect(() => {
+      Axios({
+        method: "GET",
+        withCredentials: true,
+        url: "http://localhost:5000/api/exercises",
+        headers: {
+          "Content-Type": "application/json",
+          "x-access-token": auth.token
+        }
+      }).then((res) => {
+        setExercises(res.data.ejercicios[0])
+      })
+        .catch((err) => console.log(err))
+    },[])
     
+    console.log(exercises)
   
+    const arrayExercises = Object.keys(exercises) 
 
     return (
       <div>
-        <p>Profile</p>
-        <p>{user.username}</p>
-        <button onClick={handleLogout} >Logout</button>
+        <PrivateNavbar/>
+        <p>Welcome, {user.username}</p>
+        <div className="container_exercises">
+          {arrayExercises.map((value, index) => { return <div key={index}>{value}</div> })}
+        </div>
       </div>
     );
   }

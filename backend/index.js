@@ -28,6 +28,7 @@ app.use(
 
 //routers
 app.use("/api", require("./routes/index"))
+app.use("/api", require("./routes/secretRoutes"))
 
 
 //starting the server

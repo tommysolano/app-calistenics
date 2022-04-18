@@ -18,7 +18,7 @@ function App() {
     <BrowserRouter>
 
       <Routes>
-        <Route path="/" element={<Homepage/>}/>
+        <Route path="/" element={!auth.auth ? <Homepage/> : <Navigate to="/profile" replace />}/>
         <Route path="/register" element={ !auth.auth ? <Register/> : <Navigate to="/profile" replace />}/>
         <Route path="/login" element={ !auth.auth ? <Login /> : <Navigate to="/profile" replace /> } />
         <Route path="/profile" element={ auth.auth ? <Profile />  : <Navigate to="/" replace /> } />

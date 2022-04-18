@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/user')
 const jwt = require("jsonwebtoken")
-const verifyToken = require('../libs/verifyToken') 
+const verifyToken = require('../libs/verifyToken')
 
 // registro de usuarios
 router.post("/signup", async (req, res) => {
