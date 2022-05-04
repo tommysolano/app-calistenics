@@ -19,9 +19,9 @@ export default function Navbar () {
     return (
         <div className="privatenavbar">
             <div className="container_calistenics_private">
-                <NavLink to="/" className="calistenics_private">CALISTENICS APP</NavLink>
+                <NavLink to="/" className="calistenics_private">CALISTHENICS APP</NavLink>
             </div>
-            <button onClick={handleLogout} className="logout">Logout</button>
+            <button onClick={handleLogout} className="logout">Cerrar sesión</button>
         </div>
     )
 }

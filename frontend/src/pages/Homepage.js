@@ -12,10 +12,10 @@ function Homepage() {
           <div className="container_content_home">
             <div className="container_text_home">
               <div className="container_pain">
-                <p>PAIN IS JUST WEAKNESS LEAVING YOUR BODY</p>
+                <p>EL DOLOR SÓLO ES LA DEBILIDAD ABANDONANDO TU CUERPO</p>
               </div>
               <div className="container_btn_start">
-                <NavLink to="/register" className="start_now">START NOW</NavLink>
+                <NavLink to="/register" className="start_now">EMPEZAR AHORA</NavLink>
               </div>
             </div>
           </div>

@@ -66,13 +66,13 @@ function Login() {
       <PublictNavbar />
       <div className="container_login">
         <div className="position_login">
-          <p>Login in your Calistenic Account!</p>
+          <p>¡Inicia sesión en tu cuenta Calisthenic!</p>
           <form onSubmit={handleSubmit} >
             <input
               type="email"
               id="email"
               name="email"
-              placeholder='Email'
+              placeholder='Correo'
               value={formInputs.email}
               onChange={handleInputChange}
             /> <br />
@@ -82,16 +82,16 @@ function Login() {
               type="password"
               id="password"
               name="password"
-              placeholder="Password"
+              placeholder="Contraseña"
               value={formInputs.password}
               onChange={handleInputChange}
             /> <br /> <br />
 
-            <input type="submit" value="Login" className="btn_login" />
+            <input type="submit" value="Iniciar sesion" className="btn_login" />
           </form>
           <div className="container_create_acc">
-            <p className="text_acc">Don't have an account?</p>
-            <NavLink to="/register" className="create_acc">Create Account</NavLink>
+            <p className="text_acc">¿No tienes una cuenta?</p>
+            <NavLink to="/register" className="create_acc">Crear una cuenta</NavLink>
           </div>
         </div>
       </div>

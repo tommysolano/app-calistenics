@@ -1,0 +1,12 @@
+.container_profile {
+  width: 100%;
+  background-color: #13172D;
+}
+
+.container_profile p {
+  padding-top: 20px;
+  padding-left: 30px;
+  color: #fff;
+  font-size: 2em;
+}
+/*# sourceMappingURL=profile.css.map */

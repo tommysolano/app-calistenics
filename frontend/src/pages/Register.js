@@ -77,7 +77,7 @@ function Register() {
               type="name"
               id="name"
               name="name"
-              placeholder="Name"
+              placeholder="Nombre"
               value={formInputs.name}
               onChange={handleInputChange}
             /> <br /> <br />
@@ -86,7 +86,7 @@ function Register() {
               type="email"
               id="email"
               name="email"
-              placeholder="Email"
+              placeholder="Correo"
               value={formInputs.email}
               onChange={handleInputChange}
             /> <br /> <br />
@@ -95,16 +95,16 @@ function Register() {
               type="password"
               id="password"
               name="password"
-              placeholder="Password"
+              placeholder="Contraseña"
               value={formInputs.password}
               onChange={handleInputChange}
             /> <br /> <br />
 
-            <input type="submit" value="Register" className="btn_reg"/>
+            <input type="submit" value="Registro" className="btn_reg"/>
           </form>
           <div className="container_login_acc">
-            <p className="text_reg">Already Have an account</p>
-            <NavLink to="/login" className="reg_acc">Login</NavLink>
+            <p className="text_reg">Ya tienes una cuenta</p>
+            <NavLink to="/login" className="reg_acc">Iniciar sesion</NavLink>
           </div>
         </div>
       </div>

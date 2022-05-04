@@ -1,0 +1,123 @@
+.container_exercises {
+  width: 100%;
+}
+
+.container_exercises .title_exercise {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 40px;
+}
+
+.container_exercises .title_exercise h2 {
+  color: #fff;
+  display: inline-block;
+  border-bottom: 2px solid #fff;
+  margin: auto;
+  padding: 0 150px 10px 150px;
+  font-weight: normal;
+}
+
+.container_exercises .container_exercises_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  padding-top: 30px;
+}
+
+.container_exercises .container_exercises_list .container_exercise {
+  width: 35%;
+  height: 180px;
+  margin: 35px 0 35px 0;
+  position: relative;
+}
+
+.container_exercises .container_exercises_list .container_exercise .exercise_background_color {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #F48C06;
+  border-radius: 30px;
+  height: 100%;
+  width: 100%;
+  z-index: 9;
+}
+
+.container_exercises .container_exercises_list .container_exercise .exercise_background_color p {
+  text-align: center;
+  font-size: 2em;
+  margin: 0;
+  padding: 0;
+  z-index: 99;
+}
+
+.container_exercises .container_exercises_list .container_exercise .exercise_background_img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: .5;
+  border-radius: 30px;
+}
+
+.container_exercises .container_exercises_list .container_exercise #img_0 {
+  background-image: url(../../img/hombros.jpg);
+  background-size: cover;
+}
+
+.container_exercises .container_exercises_list .container_exercise #img_1 {
+  background-image: url(../../img/espalda.jpg);
+  background-size: cover;
+}
+
+.container_exercises .container_exercises_list .container_exercise #img_2 {
+  background-image: url(../../img/trapecios.jpg);
+  background-size: cover;
+}
+
+.container_exercises .container_exercises_list .container_exercise #img_3 {
+  background-image: url(../../img/abdominales.jpg);
+  background-size: cover;
+}
+
+.container_exercises .container_exercises_list .container_exercise #img_4 {
+  background-image: url(../../img/gluteos.jpg);
+  background-size: cover;
+}
+
+.container_exercises .container_exercises_list .container_exercise #img_5 {
+  background-image: url(../../img/brazos.jpg);
+  background-size: cover;
+}
+
+.container_exercises .container_exercises_list .container_exercise #img_6 {
+  background-image: url(../../img/piernas.jpg);
+  background-size: cover;
+}
+/*# sourceMappingURL=exercises.css.map */
