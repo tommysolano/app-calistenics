@@ -1,9 +1,20 @@
-import React  from 'react'
+import React, { useContext}  from 'react'
+import { Navigate } from "react-router-dom"
+import { authContext } from "../context/authContext"
 import PublictNavbar from "../components/publicNavbar"
 import { NavLink } from "react-router-dom"
 import "../public/css/homepage/homepage.css"
 
+
+
 function Homepage() {
+
+  const { auth } = useContext(authContext) // verifica si ha iniciado sesión
+
+  if (auth.auth) {
+    return <Navigate to="/profile" replace/>
+  }
+
     return (
       <div>
         <PublictNavbar/>

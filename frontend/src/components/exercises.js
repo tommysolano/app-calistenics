@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react"
 import { authContext } from "../context/authContext"
 //import { NavLink } from "react-router-dom"
+
 import Axios from 'axios'
 import "../public/css/exercises/exercises.css"
 
@@ -42,6 +43,7 @@ function Exercises() {
                     </div>
                 </div> })}
             </div>
+            
         </div>
     )
 }

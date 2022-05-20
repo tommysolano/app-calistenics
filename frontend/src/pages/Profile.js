@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useContext } from "react"
 import { authContext } from "../context/authContext"
+import { Outlet } from 'react-router-dom'
 import Exercises from "../components/exercises"
 import Axios from 'axios'
 import PrivateNavbar from "../components/privateNavbar"
 import "../public/css/profile/profile.css"
+
 
 function Profile() {
 
@@ -32,7 +34,8 @@ function Profile() {
         <PrivateNavbar/>
         <div className="container_profile">
           <p>Bienvenido, {user.username}</p>
-          <Exercises/>
+            <Exercises/>
+            <Outlet/>
         </div>
       </div>
     );

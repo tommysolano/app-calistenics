@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react';
+import { Navigate } from "react-router-dom"
 import { authContext } from "../context/authContext"
 import { NavLink } from "react-router-dom"
 import PublictNavbar from "../components/publicNavbar"
@@ -6,8 +7,11 @@ import "../public/css/login/login.css"
 
 function Login() {
 
-  const { setAuth } = useContext(authContext) // verifica si ha iniciado sesión
+  const { auth ,setAuth } = useContext(authContext) // verifica si ha iniciado sesión
 
+  if (auth.auth) {
+    return <Navigate to="/profile" replace/>
+  }
 
   const [formInputs, setFormInputs] = useState({ // el estado del formulario que se enviará al servidor
     email: "",
@@ -31,7 +35,7 @@ function Login() {
     const data = {
       email: formInputs.email,
       password: formInputs.password
-    }
+    } 
 
     try {
 

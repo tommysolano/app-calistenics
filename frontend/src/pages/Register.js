@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react';
+import { Navigate } from "react-router-dom"
 import { authContext } from "../context/authContext"
 import { NavLink } from "react-router-dom"
 import PublictNavbar from "../components/publicNavbar"
@@ -7,7 +8,11 @@ import "../public/css/register/register.css"
 
 function Register() {
 
-  const { setAuth } = useContext(authContext) // verifica si ha iniciado sesión
+  const { auth, setAuth } = useContext(authContext) // verifica si ha iniciado sesión
+
+  if (auth.auth) {
+    return <Navigate to="/profile" replace/>
+  }
 
   const [formInputs, setFormInputs] = useState({ // el estado del formulario que se enviará al servidor
     username: "",
@@ -71,7 +76,7 @@ function Register() {
       <PublictNavbar />
       <div className="container_reg">
         <div className="position_reg">
-          <p>Sing Up and Start Workout</p>
+          <p>Registrate y Empieza tu entrenamiento</p>
           <form onSubmit={handleSubmit}>
             <input
               type="name"
