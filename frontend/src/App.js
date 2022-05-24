@@ -9,7 +9,8 @@ import Notfound from "./pages/Notfound"
 import Profile from "./pages/Profile"
 import Footer from "./components/footer"
 import ProtectedRoute from './components/protectedRoute'
-//import ExercisesList from "./components/exercises_list"
+import ExercisesList from "./components/exercises_list"
+import Exercises from "./components/exercises"
 import "./public/css/appStyles/appStyles.css"
 
 function App() {
@@ -20,11 +21,14 @@ function App() {
     <BrowserRouter>
 
       <Routes>
-        <Route index path="/" element={<Homepage/>}/>
-        <Route path="register" element={ <Register/>}/>
+        <Route index path="/" element={<Homepage/>} />
+        <Route path="register" element={ <Register/>} />
         <Route path="login" element={ <Login /> } />
-        <Route element={<ProtectedRoute user={auth.auth}/>}>
-          <Route path="profile" element={ <Profile /> } />
+        <Route element={<ProtectedRoute user={auth.auth}/>}> {/* protegemos las rutas */}
+          <Route path="profile" element={ <Profile /> }>
+            <Route index element={ <Exercises/>} />
+            <Route path="exerciseslist" element={ <ExercisesList />} />
+          </Route>
         </Route>
         <Route path="*" element={<Notfound/>}/>
       </Routes>

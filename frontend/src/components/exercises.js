@@ -29,6 +29,8 @@ function Exercises() {
     }, [])
 
     const arrayExercises = Object.keys(exercises)
+    console.log(exercises)
+    console.log(arrayExercises)
 
     return (
         <div className="container_exercises">
