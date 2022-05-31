@@ -43,14 +43,20 @@
   padding-top: 30px;
 }
 
-.container_exercises .container_exercises_list .container_exercise {
+.container_exercises .container_exercises_list a {
+  display: inline-block;
   width: 35%;
   height: 180px;
   margin: 35px 0 35px 0;
   position: relative;
+  text-decoration: none;
 }
 
-.container_exercises .container_exercises_list .container_exercise .exercise_background_color {
+.container_exercises .container_exercises_list a .container_exercise {
+  height: 100%;
+}
+
+.container_exercises .container_exercises_list a .container_exercise .exercise_background_color {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -68,7 +74,7 @@
   z-index: 9;
 }
 
-.container_exercises .container_exercises_list .container_exercise .exercise_background_color p {
+.container_exercises .container_exercises_list a .container_exercise .exercise_background_color p {
   text-align: center;
   font-size: 2em;
   margin: 0;
@@ -76,7 +82,7 @@
   z-index: 99;
 }
 
-.container_exercises .container_exercises_list .container_exercise .exercise_background_img {
+.container_exercises .container_exercises_list a .container_exercise .exercise_background_img {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -86,37 +92,37 @@
   border-radius: 30px;
 }
 
-.container_exercises .container_exercises_list .container_exercise #img_0 {
+.container_exercises .container_exercises_list a .container_exercise #img_0 {
   background-image: url(../../img/hombros.jpg);
   background-size: cover;
 }
 
-.container_exercises .container_exercises_list .container_exercise #img_1 {
+.container_exercises .container_exercises_list a .container_exercise #img_1 {
   background-image: url(../../img/espalda.jpg);
   background-size: cover;
 }
 
-.container_exercises .container_exercises_list .container_exercise #img_2 {
+.container_exercises .container_exercises_list a .container_exercise #img_2 {
   background-image: url(../../img/trapecios.jpg);
   background-size: cover;
 }
 
-.container_exercises .container_exercises_list .container_exercise #img_3 {
+.container_exercises .container_exercises_list a .container_exercise #img_3 {
   background-image: url(../../img/abdominales.jpg);
   background-size: cover;
 }
 
-.container_exercises .container_exercises_list .container_exercise #img_4 {
+.container_exercises .container_exercises_list a .container_exercise #img_4 {
   background-image: url(../../img/gluteos.jpg);
   background-size: cover;
 }
 
-.container_exercises .container_exercises_list .container_exercise #img_5 {
+.container_exercises .container_exercises_list a .container_exercise #img_5 {
   background-image: url(../../img/brazos.jpg);
   background-size: cover;
 }
 
-.container_exercises .container_exercises_list .container_exercise #img_6 {
+.container_exercises .container_exercises_list a .container_exercise #img_6 {
   background-image: url(../../img/piernas.jpg);
   background-size: cover;
 }

@@ -27,7 +27,7 @@ function App() {
         <Route element={<ProtectedRoute user={auth.auth}/>}> {/* protegemos las rutas */}
           <Route path="profile" element={ <Profile /> }>
             <Route index element={ <Exercises/>} />
-            <Route path="exerciseslist" element={ <ExercisesList />} />
+            <Route path=":exercisesListTitleParams" element={ <ExercisesList />} />
           </Route>
         </Route>
         <Route path="*" element={<Notfound/>}/>

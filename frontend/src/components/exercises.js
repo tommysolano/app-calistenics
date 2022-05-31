@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react"
 import { authContext } from "../context/authContext"
-//import { NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 import Axios from 'axios'
 import "../public/css/exercises/exercises.css"
@@ -29,8 +29,7 @@ function Exercises() {
     }, [])
 
     const arrayExercises = Object.keys(exercises)
-    console.log(exercises)
-    console.log(arrayExercises)
+
 
     return (
         <div className="container_exercises">
@@ -38,12 +37,15 @@ function Exercises() {
                 <h2>EJERCICIOS</h2>
             </div>
             <div className="container_exercises_list">
-                {arrayExercises.map((value, index) => { return <div key={index} className="container_exercise">
-                    <div className="exercise_background_img" id={"img_"+index}></div>
-                    <div className="exercise_background_color">
-                        <p>{value}</p>
-                    </div>
-                </div> })}
+                {arrayExercises.map((value, index) => 
+                { return <NavLink to={`/profile/${value}`} key={index}>
+                    <div className="container_exercise">
+                        <div className="exercise_background_img" id={"img_"+index}></div>
+                        <div className="exercise_background_color">
+                            <p>{value}</p>
+                        </div>
+                </div>
+                </NavLink> })}
             </div>
             
         </div>
