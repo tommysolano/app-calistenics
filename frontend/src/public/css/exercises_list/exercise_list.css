@@ -1,0 +1,31 @@
+.container_exercises_list {
+  width: 100%;
+}
+
+.container_exercises_list .title_exercise_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 40px;
+}
+
+.container_exercises_list .title_exercise_list h2 {
+  color: #fff;
+  display: inline-block;
+  border-bottom: 2px solid #fff;
+  margin: auto;
+  padding: 0 150px 10px 150px;
+  font-weight: normal;
+}
+
+.container_exercises_list .container_list_exercises_id p {
+  color: #fff;
+}
+/*# sourceMappingURL=exercise_list.css.map */

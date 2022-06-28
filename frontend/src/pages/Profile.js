@@ -32,9 +32,10 @@ function Profile() {
       <div>
         <PrivateNavbar/>
         <div className="container_profile">
-          <p>Bienvenido, {user.username}</p>
-          <br />
-          <NavLink to="/profile">profile</NavLink>
+          <div className="container_profile_info">
+            <NavLink to="/profile" className="link_profile">INICIO</NavLink>
+            <p>Bienvenido, {user.username}</p>
+          </div>
           <Outlet/>
         </div>
       </div>

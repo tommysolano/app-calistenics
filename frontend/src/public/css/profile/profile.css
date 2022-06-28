@@ -3,10 +3,28 @@
   background-color: #13172D;
 }
 
-.container_profile p {
-  padding-top: 20px;
-  padding-left: 30px;
+.container_profile .container_profile_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container_profile .container_profile_info .link_profile {
+  display: inline-block;
+  text-decoration: none;
   color: #fff;
-  font-size: 2em;
+  font-size: 1.3em;
+}
+
+.container_profile .container_profile_info p {
+  color: #fff;
+  font-size: 1.3em;
 }
 /*# sourceMappingURL=profile.css.map */
