@@ -1,0 +1,27 @@
+.container_exercise_id {
+  width: 100%;
+}
+
+.container_exercise_id .title_exercise_id {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 40px;
+}
+
+.container_exercise_id .title_exercise_id h2 {
+  color: #fff;
+  display: inline-block;
+  border-bottom: 2px solid #fff;
+  margin: auto;
+  padding: 0 150px 10px 150px;
+  font-weight: normal;
+}
+/*# sourceMappingURL=exercise.css.map */

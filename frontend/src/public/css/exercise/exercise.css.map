@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,sBAAsB,CAAC;EACnB,KAAK,EAAG,IAAI;CAYsB;;AAbtC,AAEI,sBAFkB,CAElB,kBAAkB,CAAC;EACf,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,GAAG;EACnB,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,IAAI;CAOW;;AAbpC,AAOQ,sBAPc,CAElB,kBAAkB,CAKd,EAAE,CAAC;EACC,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,YAAY;EACrB,aAAa,EAAE,cAAc;EAC7B,MAAM,EAAE,IAAI;EACZ,OAAO,EAAE,kBAAkB;EAC3B,WAAW,EAAE,MAAM;CAAG",
+    "sources": [
+        "exercise.sass"
+    ],
+    "names": [],
+    "file": "exercise.css"
+}

@@ -13,5 +13,58 @@
             padding: 0 150px 10px 150px
             font-weight: normal
     .container_list_exercises_id
-        p
+        display: flex
+        flex-direction: row
+        justify-content: space-around
+        flex-wrap: wrap
+        width: 90%
+        height: 100%
+        margin: auto
+        padding-top: 30px
+        a
+            text-decoration: none
             color: #fff
+            display: inline-block
+            width: 35%
+            height: 180px
+            margin: 35px 0 35px 0
+            .list_exercise_id
+                height: 100%
+                width: 100%
+                position: relative
+                .list_exercise_id_img
+                    width: 100%
+                    height: 100%
+                    position: relative
+                    z-index: 50
+                    img
+                        border-radius: 30px
+                        width: 100%
+                        height: 100%
+                .list_exercise_id_color
+                    background: #E85D04
+                    width: 100%
+                    height: 100%
+                    position: absolute
+                    z-index: 100
+                    top: 0
+                    left: 0
+                    border-radius: 30px
+                    opacity: .5
+                .list_exercise_id_title
+                    width: 100%
+                    height: 100%
+                    position: absolute
+                    z-index: 101
+                    top: 0
+                    left: 0
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    flex-wrap: wrap
+                    p
+                        text-align: center
+                        font-size: 1.6em
+                        align-self: center
+                        color: #fff
+                        

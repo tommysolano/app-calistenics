@@ -25,7 +25,91 @@
   font-weight: normal;
 }
 
-.container_exercises_list .container_list_exercises_id p {
+.container_exercises_list .container_list_exercises_id {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  padding-top: 30px;
+}
+
+.container_exercises_list .container_list_exercises_id a {
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  width: 35%;
+  height: 180px;
+  margin: 35px 0 35px 0;
+}
+
+.container_exercises_list .container_list_exercises_id a .list_exercise_id {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.container_exercises_list .container_list_exercises_id a .list_exercise_id .list_exercise_id_img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 50;
+}
+
+.container_exercises_list .container_list_exercises_id a .list_exercise_id .list_exercise_id_img img {
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+}
+
+.container_exercises_list .container_list_exercises_id a .list_exercise_id .list_exercise_id_color {
+  background: #E85D04;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  border-radius: 30px;
+  opacity: .5;
+}
+
+.container_exercises_list .container_list_exercises_id a .list_exercise_id .list_exercise_id_title {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container_exercises_list .container_list_exercises_id a .list_exercise_id .list_exercise_id_title p {
+  text-align: center;
+  font-size: 1.6em;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   color: #fff;
 }
 /*# sourceMappingURL=exercise_list.css.map */

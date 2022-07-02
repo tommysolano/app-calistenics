@@ -11,6 +11,7 @@ import Footer from "./components/footer"
 import ProtectedRoute from './components/protectedRoute'
 import ExercisesList from "./components/exercises_list"
 import Exercises from "./components/exercises"
+import Exercise from "./components/exercise"
 import "./public/css/appStyles/appStyles.css"
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path="profile" element={ <Profile /> }>
             <Route index element={ <Exercises/>} />
             <Route path=":exercisesListTitleParams" element={ <ExercisesList />} />
+            <Route path=":exercisesListTitleParams/:exercise" element={ <Exercise />} />
           </Route>
         </Route>
         <Route path="*" element={<Notfound/>}/>

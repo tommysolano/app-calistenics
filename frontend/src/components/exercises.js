@@ -47,7 +47,6 @@ function Exercises() {
                 </div>
                 </NavLink> })}
             </div>
-            
         </div>
     )
 }
