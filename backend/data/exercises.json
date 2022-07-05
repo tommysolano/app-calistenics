@@ -1,6 +1,6 @@
 {
     "nombre": "lista de ejercicios calistenia",
-    "version": 1.2,
+    "version": 1.3,
     "ejercicios": [
         {
             "Hombros": {
@@ -8,7 +8,7 @@
                     "imgPortada": "https://drive.google.com/uc?export=view&id=1FRCM14PmqIZdWYZrmXFg-XS1E1SzH9cD",
                     "imgEjercicios": [],
                     "tutorial": "https://www.youtube.com/watch?v=2z1UaxVPOHY",
-                    "Descripcion": ""
+                    "Descripcion": "se debe sujetar un banco con la palma de las manos en el borde a una anchura superior a la de los hombros, los pies se apoyan a una distancia en la que al realizar el movimiento descendente o ascendente la espalda roce el banco, se debe bajar hasta que los codos esten a la altura de los hombros, la espalda debe permanecer recta durante todo el ejercicio"
                 },
                 "Flexiones Pike": {
                     "imgPortada": "https://drive.google.com/uc?export=view&id=1FRCM14PmqIZdWYZrmXFg-XS1E1SzH9cD",
@@ -121,328 +121,614 @@
             },
             "Espalda": {
                 "Flexiones Supinas o de Espalda (Espalda alta)": {
+                    "imgPortada": "",
+                    "imgEjercicios": [],
                     "tutorial": "https://youtu.be/8H-TSjVRCUA",
-                    "tipo": "Espalda Alta"
+                    "Descripcion": ""
                 },
                 "Remos Invertidos (Espalda alta)": {
+                    "imgPortada": "",
+                    "imgEjercicios": [],
                     "tutorial": "https://www.youtube.com/watch?v=uyAJKrg-Gvs",
-                    "tipo": "Espalda Alta"
+                    "Descripcion": ""
                 },
                 "Pull Ups (Espalda alta)": {
+                    "imgPortada": "",
+                    "imgEjercicios": [],
                     "tutorial": "https://www.youtube.com/watch?v=ZZbQ8x9BW4U",
-                    "tipo": "Espalda Alta"
+                    "Descripcion": ""
                 },
                 "Skin the Cat (Espalda alta)": {
+                    "imgPortada": "",
+                    "imgEjercicios": [],
                     "tutorial": "https://youtu.be/Bm_3ZMyxcdA",
-                    "tipo": "Espalda Alta"
+                    "Descripcion": ""
                 },
                 "Superman con Brazos hacia Atrás (Espalda alta)": {
+                    "imgPortada": "",
+                    "imgEjercicios": [],
                     "tutorial": "https://www.youtube.com/watch?v=Se_AKAcGT60",
-                    "tipo": "Espalda Alta"
+                    "Descripcion": ""
                 },
                 "Dominadas Anchas (Espalda alta)": {
+                    "imgPortada": "",
+                    "imgEjercicios": [],
                     "tutorial": "https://www.youtube.com/watch?v=sDf3ylp9Jbw",
-                    "tipo": "Espalda Alta"
+                    "Descripcion": ""
                 },
                 "Dominadas Arqueras (Espalda alta)": {
+                    "imgPortada": "",
+                    "imgEjercicios": [],
                     "tutorial": "https://www.youtube.com/watch?v=LvekuNbCrFc",
-                    "tipo": "Espalda Alta"
+                    "Descripcion": ""
                 },
                 "Ice Cream Makers (Espalda alta)": {
+                    "imgPortada": "",
+                    "imgEjercicios": [],
                     "tutorial": "https://youtu.be/oeJVSNhkvTQ",
-                    "tipo": "Espalda Alta"
+                    "Descripcion": ""
                 },
                 "Back Lever Pull Up (Espalda alta)": {
+                    "imgPortada": "",
+                    "imgEjercicios": [],
                     "tutorial": "https://youtu.be/JGEBdK2fN4s",
-                    "tipo": "Espalda Alta"
+                    "Descripcion": ""
                 },
                 "Superman (Espalda Baja)": {
+                    "imgPortada": "",
+                    "imgEjercicios": [],
                     "tutorial": "https://www.youtube.com/watch?v=z6PJMT2y8GQ",
-                    "tipo": "Espalda Baja"
+                    "Descripcion": ""
                 },
                 "Puentes (Espalda Baja)": {
+                    "imgPortada": "",
+                    "imgEjercicios": [],
                     "tutorial": "https://www.youtube.com/watch?v=YRqoIM0u0PY",
-                    "tipo": "Espalda Baja"
+                    "Descripcion": ""
                 },
                 "Flexiones a Mesa (Espalda Baja)": {
+                    "imgPortada": "",
+                    "imgEjercicios": [],
                     "tutorial": "https://youtu.be/P-lVIiP1Exs",
-                    "tipo": "Espalda Baja"
+                    "Descripcion": ""
                 },
                 "Flexiones en Puente (Espalda Baja)": {
+                    "imgPortada": "",
+                    "imgEjercicios": [],
                     "tutorial": "https://youtu.be/E_hpzjukyfM",
-                    "tipo": "Espalda Baja"
+                    "Descripcion": ""
                 },
                 "Levantamiento de Piernas en Pino (Espalda Baja)": {
+                    "imgPortada": "",
+                    "imgEjercicios": [],
                     "tutorial": "https://youtu.be/scZCFRxJFs4",
-                    "tipo": "Espalda Baja"
+                    "Descripcion": ""
                 }
             },
             "Trapecios": {
                 "Círculos de Brazos": {
-                    "tutorial": "https://www.youtube.com/watch?v=ZBpRvlkkVQg"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://www.youtube.com/watch?v=ZBpRvlkkVQg",
+                    "Descripcion": ""
                 },
                 "Superman": {
-                    "tutorial": "https://www.youtube.com/watch?v=z6PJMT2y8GQ"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://www.youtube.com/watch?v=z6PJMT2y8GQ",
+                    "Descripcion": ""
                 },
                 "Dominadas escapulares": {
-                    "tutorial": "https://www.youtube.com/watch?v=-Ydlap3r3Ww"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://www.youtube.com/watch?v=-Ydlap3r3Ww",
+                    "Descripcion": ""
                 },
                 "Flexiones escapulares": {
-                    "tutorial": "https://www.youtube.com/watch?v=ENPJV-jw6l8"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://www.youtube.com/watch?v=ENPJV-jw6l8",
+                    "Descripcion": ""
                 }
             },
             "Abdominales": {
                 "Plancha": {
-                    "tutorial": "https://www.youtube.com/watch?v=swqjG8lWRl4"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://www.youtube.com/watch?v=swqjG8lWRl4",
+                    "Descripcion": ""
                 },
                 "Plancha Invertida": {
-                    "tutorial": "https://www.youtube.com/watch?v=YPd5U22z454"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://www.youtube.com/watch?v=YPd5U22z454",
+                    "Descripcion": ""
                 },
                 "Plancha Lateral": {
-                    "tutorial": "https://www.youtube.com/watch?v=bRivOELQVOs"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://www.youtube.com/watch?v=bRivOELQVOs",
+                    "Descripcion": ""
                 },
                 "Plancha Lateral con Levantamientos de Cadera": {
-                    "tutorial": "https://www.youtube.com/watch?v=b2SWIu-s4KI"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://www.youtube.com/watch?v=b2SWIu-s4KI",
+                    "Descripcion": ""
                 },
                 "Encogimientos": {
-                    "tutorial": "https://youtu.be/bNgQWeQkFZQ"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/bNgQWeQkFZQ",
+                    "Descripcion": ""
                 },
                 "Encogimientos dobles ": {
-                    "tutorial": "https://youtu.be/ddgNpxIh47A"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/ddgNpxIh47A",
+                    "Descripcion": ""
                 },
                 "Bicicleta": {
-                    "tutorial": "https://youtu.be/W4XIrNTOy2M"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/W4XIrNTOy2M",
+                    "Descripcion": ""
                 },
                 "Elevación de rodillas colgado": {
-                    "tutorial": "https://youtu.be/qupCs50p-pQ"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/qupCs50p-pQ",
+                    "Descripcion": ""
                 },
                 "Elevación de rodillas hacia los costados": {
-                    "tutorial": "https://youtu.be/13mb5B5jpIE"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/13mb5B5jpIE",
+                    "Descripcion": ""
                 },
                 "Pose del Barco": {
-                    "tutorial": "https://youtu.be/bmHfokd4vuE"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/bmHfokd4vuE",
+                    "Descripcion": ""
                 },
                 "Elevación de piernas en Suelo": {
-                    "tutorial": "https://youtu.be/dj1ZHB_vSV8"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/dj1ZHB_vSV8",
+                    "Descripcion": ""
                 },
                 "Crunch Lateral «El Pescadito»": {
-                    "tutorial": "https://youtu.be/KPgmP5TMozQ"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/KPgmP5TMozQ",
+                    "Descripcion": ""
                 },
                 "Hollow Body Hold": {
-                    "tutorial": "https://youtu.be/bN17HBqLe9M"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/bN17HBqLe9M",
+                    "Descripcion": ""
                 },
                 "Planche Lean": {
-                    "tutorial": "https://youtu.be/08bQcDeNdYs"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/08bQcDeNdYs",
+                    "Descripcion": ""
                 },
                 "Escaladores": {
-                    "tutorial": "https://youtu.be/6uoEncbLSlw"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/6uoEncbLSlw",
+                    "Descripcion": ""
                 },
                 "Elevaciones en V (V ups)": {
-                    "tutorial": "https://youtu.be/s2It_M486dY"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/s2It_M486dY",
+                    "Descripcion": ""
                 },
                 "Tijera Abdominal": {
-                    "tutorial": "https://youtu.be/T9zvPlsc5pg"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/T9zvPlsc5pg",
+                    "Descripcion": ""
                 },
                 "Sit Up de Momia": {
-                    "tutorial": "https://youtu.be/0XIzzxw6Af8"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/0XIzzxw6Af8",
+                    "Descripcion": ""
                 },
                 "Flexiones caballito": {
-                    "tutorial": "https://youtu.be/EZRA1SdrBj0"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/EZRA1SdrBj0",
+                    "Descripcion": ""
                 },
                 "El Gusanito": {
-                    "tutorial": "https://youtu.be/mxca4Lk8jMg"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/mxca4Lk8jMg",
+                    "Descripcion": ""
                 },
                 "Plancha Dinámica": {
-                    "tutorial": "https://youtu.be/WMgKFfFfn7A"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/WMgKFfFfn7A",
+                    "Descripcion": ""
                 },
                 "Elevación de Piernas": {
-                    "tutorial": "https://youtu.be/_-9cPvtGbaI"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/_-9cPvtGbaI",
+                    "Descripcion": ""
                 },
                 "Spiderman Pushups": {
-                    "tutorial": "https://youtu.be/jqHGkN07MGI"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/jqHGkN07MGI",
+                    "Descripcion": ""
                 },
                 "Codo a Rodilla en Plancha Lateral": {
-                    "tutorial": "https://youtu.be/eJij4jPlv1U"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/eJij4jPlv1U",
+                    "Descripcion": ""
                 },
                 "Plancha Delfín": {
-                    "tutorial": "https://youtu.be/08Qt_U5qvsY"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/08Qt_U5qvsY",
+                    "Descripcion": ""
                 },
                 "Plancha con Patada Diagonal": {
-                    "tutorial": "https://youtu.be/seYCI3j4344"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/seYCI3j4344",
+                    "Descripcion": ""
                 }
             },
             "Glúteos": {
                 "Zancada desde el Fondo": {
-                    "tutorial": "https://www.youtube.com/watch?v=zhzi4iUry58"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://www.youtube.com/watch?v=zhzi4iUry58",
+                    "Descripcion": ""
                 },
                 "Hip Thrust sobre las Manos": {
-                    "tutorial": "https://www.youtube.com/watch?v=ymSczYg1zVc"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://www.youtube.com/watch?v=ymSczYg1zVc",
+                    "Descripcion": ""
                 },
                 "Hip Thrust (sobre la espalda)": {
-                    "tutorial": "https://www.youtube.com/watch?v=0iwQ5H8ygW8"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://www.youtube.com/watch?v=0iwQ5H8ygW8",
+                    "Descripcion": ""
                 },
                 "Saltos Laterales": {
-                    "tutorial": "https://www.youtube.com/watch?v=LWpPLFvVqhM"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://www.youtube.com/watch?v=LWpPLFvVqhM",
+                    "Descripcion": ""
                 },
                 "Hip Thrust con Marcha": {
-                    "tutorial": "https://www.youtube.com/watch?v=qS3xuHINbYI"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://www.youtube.com/watch?v=qS3xuHINbYI",
+                    "Descripcion": ""
                 },
                 "Sentadilla Diagonal": {
-                    "tutorial": "https://www.youtube.com/watch?v=x_IrV2O9_FE"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://www.youtube.com/watch?v=x_IrV2O9_FE",
+                    "Descripcion": ""
                 },
                 "Sentadilla lateral alternada": {
-                    "tutorial": "https://www.youtube.com/watch?v=l3U5-c7xpho"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://www.youtube.com/watch?v=l3U5-c7xpho",
+                    "Descripcion": ""
                 },
                 "Zancadas Caminando": {
-                    "tutorial": "https://www.youtube.com/watch?v=xUrUIQdzfI4"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://www.youtube.com/watch?v=xUrUIQdzfI4",
+                    "Descripcion": ""
                 },
                 "Zancada Cruzada": {
-                    "tutorial": "https://www.youtube.com/watch?v=8ImCPCIWuy0"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://www.youtube.com/watch?v=8ImCPCIWuy0",
+                    "Descripcion": ""
                 },
                 "Sentadilla Pistol Asistida": {
-                    "tutorial": "https://www.youtube.com/watch?v=zoSErCkBl8k"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://www.youtube.com/watch?v=zoSErCkBl8k",
+                    "Descripcion": ""
                 },
                 "Sentadilla Búlgara": {
-                    "tutorial": "https://www.youtube.com/watch?v=K-6DG1hcHzU"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://www.youtube.com/watch?v=K-6DG1hcHzU",
+                    "Descripcion": ""
                 }
             },
             "Brazos": {
                 "Flexiones con Dedos (Antebrazos)": {
-                    "tutorial": "https://www.youtube.com/watch?v=a_UyN0n_4fs"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://www.youtube.com/watch?v=a_UyN0n_4fs",
+                    "Descripcion": ""
                 },
                 "Flexiones de Muñecas (Antebrazos)": {
-                    "tutorial": "https://www.youtube.com/watch?v=Ti2pBxDjmQ0"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://www.youtube.com/watch?v=Ti2pBxDjmQ0",
+                    "Descripcion": ""
                 },
                 "Dominadas con Toalla (Antebrazos)": {
-                    "tutorial": "https://www.youtube.com/watch?v=h0aMSXiiY4E"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://www.youtube.com/watch?v=h0aMSXiiY4E",
+                    "Descripcion": ""
                 },
                 "Dominadas Supinas Excéntricas (Bíceps)": {
-                    "tutorial": "https://www.youtube.com/watch?v=Dx740NIKX94"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://www.youtube.com/watch?v=Dx740NIKX94",
+                    "Descripcion": ""
                 },
                 "Dominadas Supinas (Bíceps)": {
-                    "tutorial": "https://www.youtube.com/watch?v=SG_gvhrRokw"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://www.youtube.com/watch?v=SG_gvhrRokw",
+                    "Descripcion": ""
                 },
                 "Headbangers (Bíceps)": {
-                    "tutorial": "https://www.youtube.com/watch?v=D4r7H5t5eb8"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://www.youtube.com/watch?v=D4r7H5t5eb8",
+                    "Descripcion": ""
                 },
                 "Push Up Hindú (Bíceps)": {
-                    "tutorial": "https://www.youtube.com/watch?v=nBLy1IGtSJ8"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://www.youtube.com/watch?v=nBLy1IGtSJ8",
+                    "Descripcion": ""
                 },
                 "Flexiones Diamantes (Tríceps)": {
-                    "tutorial": "https://youtu.be/tOmXT2KV8Zg"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/tOmXT2KV8Zg",
+                    "Descripcion": ""
                 },
                 "Flexiones a Una Mano (Tríceps)": {
-                    "tutorial": "https://youtu.be/knI-3YOp7Xs"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/knI-3YOp7Xs",
+                    "Descripcion": ""
                 },
                 "Fondos regulares (Tríceps)": {
-                    "tutorial": "https://youtu.be/hSfqZAyIl8g"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/hSfqZAyIl8g",
+                    "Descripcion": ""
                 },
                 "Fondos en Barra Recta (Tríceps)": {
-                    "tutorial": "https://youtu.be/fdrhUMQnDCk"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/fdrhUMQnDCk",
+                    "Descripcion": ""
                 },
                 "Fondos en Banco (Tríceps)": {
-                    "tutorial": "https://youtu.be/c3ZGl4pAwZ4"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/c3ZGl4pAwZ4",
+                    "Descripcion": ""
                 },
                 "Fondos Coreanos (Tríceps)": {
-                    "tutorial": "https://youtu.be/FbaPwllLxTQ"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/FbaPwllLxTQ",
+                    "Descripcion": ""
                 },
                 "Flexiones en Handstand (Tríceps)": {
-                    "tutorial": "https://www.youtube.com/watch?v=Eec50GWqlEs"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://www.youtube.com/watch?v=Eec50GWqlEs",
+                    "Descripcion": ""
                 },
                 "L-Sit y V-Sit (Tríceps)": {
-                    "tutorial": "https://youtu.be/I1arbAXr6b8"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/I1arbAXr6b8",
+                    "Descripcion": ""
                 },
                 "Fondos Imposibles (Tríceps)": {
-                    "tutorial": "https://youtu.be/s3DK889a3Lg"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/s3DK889a3Lg",
+                    "Descripcion": ""
                 }
             },
             "Piernas": {
                 "Sentadilla Asistida (Cuádriceps)": {
-                    "tutorial": "https://www.youtube.com/watch?v=3s48BrQvoPY"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://www.youtube.com/watch?v=3s48BrQvoPY",
+                    "Descripcion": ""
                 },
                 "Sentadilla Isométrica (Cuádriceps)": {
-                    "tutorial": "https://www.youtube.com/watch?v=-qXuHrdmk4g"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://www.youtube.com/watch?v=-qXuHrdmk4g",
+                    "Descripcion": ""
                 },
                 "Sentadillas (Cuádriceps)": {
-                    "tutorial": "https://youtu.be/SzOTD_k59Js"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/SzOTD_k59Js",
+                    "Descripcion": ""
                 },
                 "Sentadillas con pies elevados (Cuádriceps)": {
-                    "tutorial": "https://www.youtube.com/watch?v=6cmBiDXgvCk"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://www.youtube.com/watch?v=6cmBiDXgvCk",
+                    "Descripcion": ""
                 },
                 "Zancadas o Estocadas (Cuádriceps)": {
-                    "tutorial": "https://www.youtube.com/watch?v=FtNBlVNKrs0"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://www.youtube.com/watch?v=FtNBlVNKrs0",
+                    "Descripcion": ""
                 },
                 "Sentadilla Una Pierna en Banco (Cuádriceps)": {
-                    "tutorial": "https://www.youtube.com/watch?v=wScWJWqbXGY"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://www.youtube.com/watch?v=wScWJWqbXGY",
+                    "Descripcion": ""
                 },
                 "Sentadilla Una Pierna (Cuádriceps)": {
-                    "tutorial": "https://www.youtube.com/watch?v=PxNHR5K8610"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://www.youtube.com/watch?v=PxNHR5K8610",
+                    "Descripcion": ""
                 },
                 "Paseo del pato (Cuádriceps)": {
-                    "tutorial": "https://www.youtube.com/watch?v=a0mf9DaqbUM"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://www.youtube.com/watch?v=a0mf9DaqbUM",
+                    "Descripcion": ""
                 },
                 "Sentadilla Isométrica Una Pierna (Cuádriceps)": {
-                    "tutorial": "https://www.youtube.com/watch?v=CSpdGiFvY70"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://www.youtube.com/watch?v=CSpdGiFvY70",
+                    "Descripcion": ""
                 },
                 "Press de pierna en barra fija o paralelas (Isquiotibiales)": {
-                    "tutorial": "https://youtu.be/79r_I7i2pSE"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/79r_I7i2pSE",
+                    "Descripcion": ""
                 },
                 "Puente deslizando los pies (Isquiotibiales)": {
-                    "tutorial": "https://youtu.be/jj_mV1cYRNA"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/jj_mV1cYRNA",
+                    "Descripcion": ""
                 },
                 "Puente de 'ranita' (Isquiotibiales)": {
-                    "tutorial": "https://youtu.be/MQ62r2V7Lw8"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/MQ62r2V7Lw8",
+                    "Descripcion": ""
                 },
                 "Puente con alcances alternados por sobre la cabeza (Isquiotibiales)": {
-                    "tutorial": "https://youtu.be/u6ROqZiFr9s"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/u6ROqZiFr9s",
+                    "Descripcion": ""
                 },
                 "Puente con piernas muy juntas (Isquiotibiales)": {
-                    "tutorial": "https://youtu.be/fG6we-XSqRk"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/fG6we-XSqRk",
+                    "Descripcion": ""
                 },
                 "Elevación de glúteos con una pierna (Isquiotibiales)": {
-                    "tutorial": "https://youtu.be/GtbXyWuPYCE"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/GtbXyWuPYCE",
+                    "Descripcion": ""
                 },
                 "Puente con una pierna y la otra cruzada (Isquiotibiales)": {
-                    "tutorial": "https://youtu.be/2EyVj525NRk"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/2EyVj525NRk",
+                    "Descripcion": ""
                 },
                 "Puente con pies elevados (Isquiotibiales)": {
-                    "tutorial": "https://youtu.be/V-GsfUFOsNg"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/V-GsfUFOsNg",
+                    "Descripcion": ""
                 },
                 "Puente con un solo pie elevado (Isquiotibiales)": {
-                    "tutorial": "https://youtu.be/zI0yglubLpE"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/zI0yglubLpE",
+                    "Descripcion": ""
                 },
                 "Ejercicio del gusanito (Isquiotibiales)": {
-                    "tutorial": "https://youtu.be/6Nf8HEK6o2k"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/6Nf8HEK6o2k",
+                    "Descripcion": ""
                 },
                 "Press de pierna en cuadrupedia (Isquiotibiales)": {
-                    "tutorial": "https://youtu.be/8AgzrKh8ahg"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/8AgzrKh8ahg",
+                    "Descripcion": ""
                 },
                 "Puente con rodillas extendidas (Isquiotibiales)": {
-                    "tutorial": "https://youtu.be/_6do8xuLh0Y"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/_6do8xuLh0Y",
+                    "Descripcion": ""
                 },
                 "Elevación de talón a una pierna (Gemelos)": {
-                    "tutorial": "https://www.youtube.com/watch?v=NohHN2_GUz4"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://www.youtube.com/watch?v=NohHN2_GUz4",
+                    "Descripcion": ""
                 },
                 "Paseo del pato (Gemelos)": {
-                    "tutorial": "https://www.youtube.com/watch?v=7CV7ZvkDf1M"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://www.youtube.com/watch?v=7CV7ZvkDf1M",
+                    "Descripcion": ""
                 },
                 "Elevación soleo en cuclillas (Gemelos)": {
-                    "tutorial": "https://youtu.be/N_NeYFIZri4"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://youtu.be/N_NeYFIZri4",
+                    "Descripcion": ""
                 },
                 "Saltos en puntas de pie (Gemelos)": {
-                    "tutorial": "https://www.youtube.com/watch?v=ZvW4YYpMB5M"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://www.youtube.com/watch?v=ZvW4YYpMB5M",
+                    "Descripcion": ""
                 },
                 "Saltos en Tijera (Tobillos)": {
-                    "tutorial": "https://www.youtube.com/watch?v=nqj9F-EIGXw"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://www.youtube.com/watch?v=nqj9F-EIGXw",
+                    "Descripcion": ""
                 },
                 "Saltos de Sentadilla Parcial (Tobillos)": {
-                    "tutorial": "https://www.youtube.com/watch?v=IiHH0EWo8-k"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://www.youtube.com/watch?v=IiHH0EWo8-k",
+                    "Descripcion": ""
                 },
                 "Caminar sobre Talones (Tobillos)": {
-                    "tutorial": "https://www.youtube.com/watch?v=WhzNEOlxCg0"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://www.youtube.com/watch?v=WhzNEOlxCg0",
+                    "Descripcion": ""
                 },
                 "Sentadillas en Puntas de Pies (Tobillos)": {
-                    "tutorial": "https://www.youtube.com/watch?v=KHDCPVvJY88"
+                    "imgPortada": "",
+                    "imgEjercicios": [],
+                    "tutorial": "https://www.youtube.com/watch?v=KHDCPVvJY88",
+                    "Descripcion": ""
                 }
             }
         }
