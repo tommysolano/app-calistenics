@@ -59,6 +59,7 @@ function Exercise() {
             </div>
             <div className="container_info_exercise_id">
                 <p>{description}</p>
+                <iframe  src={`https://www.youtube.com/embed/${tutorial}`}  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
     )
