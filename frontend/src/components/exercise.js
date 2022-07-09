@@ -16,6 +16,10 @@ function Exercise() {
 
     let dataExercise = []
 
+    let description = ""
+    let images = []
+    let tutorial = ""
+
 
     // obtengo la data de los ejercicios
     useEffect(() => {
@@ -35,10 +39,15 @@ function Exercise() {
     }, [])
 
     
-    // pregunto si exerciseId[exercisesListTitleParams] es distinto de undefined en caso de ser verdad lo tranformo en un array dentro de la variable dataExercise
+    // pregunto si exerciseId[exercisesListTitleParams] (es el objeto que contiene la informacion del ejercicio que se quiere revisar) es distinto de undefined en caso de ser verdad lo tranformo en un array dentro de la variable dataExercise
     if (exerciseId[exercisesListTitleParams] !== undefined) {
         dataExercise = Object.entries(exerciseId[exercisesListTitleParams][exercise])
+        // guardamos la informacion del array en nuevas variables para poder itulizarlas
+        description = dataExercise[3][1]
+        images = dataExercise[1][1]
+        tutorial = dataExercise[2][1]
     }
+
 
     console.log(dataExercise)
 
@@ -49,7 +58,7 @@ function Exercise() {
                 <h2>{exercise}</h2>
             </div>
             <div className="container_info_exercise_id">
-                
+                <p>{description}</p>
             </div>
         </div>
     )

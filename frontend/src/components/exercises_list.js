@@ -41,7 +41,7 @@ function ExercisesList() {
         arrayExercisesList = Object.entries(exercisesListTitle[exercisesListTitleParams])
     }
 
-
+    console.log(arrayExercisesList)
     return (
         <div className="container_exercises_list">
             <div className="title_exercise_list">
