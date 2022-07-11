@@ -17,7 +17,7 @@ function Exercise() {
     let dataExercise = []
 
     let description = ""
-    let images = []
+    //let images = [] //agragar las imagenes de la api
     let tutorial = ""
 
 
@@ -44,12 +44,10 @@ function Exercise() {
         dataExercise = Object.entries(exerciseId[exercisesListTitleParams][exercise])
         // guardamos la informacion del array en nuevas variables para poder itulizarlas
         description = dataExercise[3][1]
-        images = dataExercise[1][1]
+        //images = dataExercise[1][1]  //el array esta actualmente vacio, deben agregarse las imagenes al archivo json
         tutorial = dataExercise[2][1]
     }
 
-
-    console.log(dataExercise)
 
 
     return (
@@ -58,8 +56,17 @@ function Exercise() {
                 <h2>{exercise}</h2>
             </div>
             <div className="container_info_exercise_id">
-                <p>{description}</p>
-                <iframe  src={`https://www.youtube.com/embed/${tutorial}`}  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div className="container_images_exercise_id">
+                    <img src="#" alt="imagen 1" />
+                    <img src="#" alt="imagen 1" />
+                    <img src="#" alt="imagen 1" />
+                </div>
+                <div className="container_description_exercise_id">
+                    <p>{description}</p>
+                </div>
+                <div className="container_video">
+                    <iframe  src={`https://www.youtube.com/embed/${tutorial}`} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
             </div>
         </div>
     )
